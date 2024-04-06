@@ -8,7 +8,9 @@ import SpotifyWebApi from 'spotify-web-api-js';
 const spotify=new SpotifyWebApi();
 function App() {
   //  const [token,setToken]=useState(null)
+  const id="31v4d6tfsyfviotsurafvhmoaui4";
    const [{user,token},dispatch]=useDataLayerValue();
+  //  console.log(token)
    useEffect(() => {
     const hash = getTokenFromUrl();
     const _token = hash.access_token;
@@ -38,6 +40,22 @@ function App() {
           // console.log(playlists); // Logging playlists
          
       });
+
+
+      ////////////////////////////////////////////////////////////////
+      // console.log(token)
+      // {console.log(user.id);}
+      spotify.getPlaylist("37i9dQZF1E36tW5bkWLjXH").then((response=>{
+        // console.log(response);
+        dispatch({
+          type:"SET_DISCOVER_WEEKLY",
+          discover_weekly:response
+        })
+      }))
+//       spotify.getPlaylist("31v4d6tfsyfviotsurafvhmoaui4").then((playlist) => {
+//         console.log(playlist);
+// });
+
     }
 }, []);
                

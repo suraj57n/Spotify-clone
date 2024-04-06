@@ -33,10 +33,10 @@ function Sidebar() {
      <br />
      <strong className="sidebar_title">PLAYLIST</strong>
      <hr />
-     {console.log(playlists)}
+     {/* {console.log(playlists)} */}
      
      {playlists?.items?.map(playlist => {
-    console.log(playlist);
+    // console.log(playlist);
     return (
         <SidebarOptions key={playlist.id} title={playlist.name} />
     );
