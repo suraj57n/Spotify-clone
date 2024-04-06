@@ -1,5 +1,5 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://online-song-player.firebaseapp.com/";
 const clientId = "f03461b8140f4cde8b16c22e25f159e2";
 const scope = [
     "user-read-currently-playing",
